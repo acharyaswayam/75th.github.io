@@ -1,0 +1,172 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #f4efe7;
+    background-image: url("floral.jpg");
+    background-repeat: repeat;
+    background-size: 400px;
+    background-attachment: fixed;
+    color: #2e2e2e;
+    scroll-behavior: smooth;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("floral.jpeg");
+    background-repeat: repeat;
+    background-size: 400px;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.text-section {
+    background-color: #f4efe7;
+}
+
+.content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.8;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.caption {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    opacity: 0.85;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout Variations */
+.single {
+    max-height: 70vh;
+}
+
+.two {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.two img {
+    width: 45%;
+}
+
+.three {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.three img {
+    width: 30%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Button */
+button {
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* Fade Animation */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .two img,
+    .three img {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
